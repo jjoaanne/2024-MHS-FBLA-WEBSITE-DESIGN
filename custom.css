@@ -1,3 +1,15 @@
+body {
+    background-color: #ebece5;
+}
+hr {
+    border-top: 5px solid #9f3649;
+    width: 60%;
+    opacity: 100%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
 .bg-primary {
     background-color: #4c707c !important;
 }
@@ -6,4 +18,15 @@
 }
 .bg-tertiary {
     background-color: #ddded7 !important;
+}
+.logo {
+    height: 6em;
+}
+.btn-primary {
+    background-color: #4c707c;
+    border: 2px solid black;
+    --bs-btn-hover-bg: black;
+    --bs-btn-active-bg: black;
+    --bs-btn-hover-border-color: black;
+    --bs-btn-active-border-color: black;
 }
