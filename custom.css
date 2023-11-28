@@ -4,24 +4,33 @@ body {
 }
 hr {
     border-top: 5px solid #9f3649;
-    width: 60%;
+    width: 75%;
     opacity: 100%;
     border-radius: 10px;
     margin: auto;
     margin-top: 2em;
     margin-bottom: 2em;
 }
+.text-primary {
+    color: #4c707c !important;
+}
 .bg-primary {
     background-color: #4c707c !important;
 }
 .bg-secondary {
-    background-color: #ebece5 !important;
+    background-color: #a2bec4 !important;
 }
 .bg-tertiary {
     background-color: #ddded7 !important;
 }
+.btgrad {
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0));
+  }
 .logo {
     height: 6em;
+}
+.slogo {
+    height: 3em;
 }
 .btn-primary {
     background-color: #4c707c;
