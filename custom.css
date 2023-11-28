@@ -35,7 +35,7 @@ hr {
 .btn-primary {
     background-color: #4c707c;
     border: 5px solid white;
-    border-radius: 1em;
+    border-radius: 0.75em;
     --bs-btn-hover-bg: black;
     --bs-btn-active-bg: black;
     --bs-btn-hover-border-color: white;
