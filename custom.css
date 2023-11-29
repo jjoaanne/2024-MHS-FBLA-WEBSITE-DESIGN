@@ -63,21 +63,12 @@ hr {
 }
 .scrolledNav {
     padding: 0 !important;
-    background-color: #a2bec4 !important;
+    background-color: rgba(163, 188, 194, 0.95) !important;
     background-image: none !important;
 }
 .scrolledNavLink {
     color: #4c707c !important;
 }
 .scrolledNavLogo {
-    height: 3em;
-}
-#indexNav {
-    transition: none;
-}
-.nav-link {
-    transition: none;
-}
-#navLogo {
-    transition: none;
+    height: 3em !important;
 }
