@@ -26,8 +26,8 @@ hr {
 .btgrad {
     background-image: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0));
   }
-.m-header {
-    margin-top: 120px;
+.mt-header {
+    margin-top: 150px;
 }
 .logo {
     height: 6em;
