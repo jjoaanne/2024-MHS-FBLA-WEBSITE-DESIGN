@@ -1,5 +1,6 @@
 body {
     background-color: #ebece5;
+    font-family: 'Poppins', sans-serif;
 }
 hr {
     border-top: 5px solid #9f3649;
@@ -36,9 +37,10 @@ hr {
 }
 .btn-primary {
     background-color: #4c707c;
-    border: 2px solid black;
+    border: 5px solid white;
+    border-radius: 0.75em;
     --bs-btn-hover-bg: black;
     --bs-btn-active-bg: black;
-    --bs-btn-hover-border-color: black;
-    --bs-btn-active-border-color: black;
+    --bs-btn-hover-border-color: white;
+    --bs-btn-active-border-color: white;
 }
