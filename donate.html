@@ -7,10 +7,13 @@
     <title>Donate - BrightPaws Gala</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="custom.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg position-fixed w-100 p-0 bg-secondary top-0">
+  <nav class="navbar navbar-expand-lg position-fixed w-100 p-0 bg-secondary top-0 z-3">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,7 +24,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body align-items-center">
-          <a class="nav-link active fs-3 fw-bold text-white ms-5 position-absolute" aria-current="page" href="index.html">BACK</a>
+          <a class="nav-link active fs-3 fw-bold ms-5 position-absolute text-primary" aria-current="page" href="index.html">BACK</a>
           <ul class="navbar-nav justify-content-around flex-grow-1 align-items-center">
             <li class="nav-item">
                 <a class="nav-link active fs-3" aria-current="page" href="index.html"><img class="slogo" src="brightpawslogo.png" alt="logo"></img></a>
@@ -33,23 +36,133 @@
   </nav>
 
   <main>
-    <div class="container m-header">
-      <div class="row">
+    <div class="container mt-header">
+      <div class="row justify-content-around">
         <div class="col-5">
           <img src="petcutout5dog.png" alt="cat cooking">
         </div>
-        <div class="col-5 text-center">
-          <h1>Support us!</h1>
+        <div class="col-5 text-center bg-secondary px-5 pt-5 rounded-5">
+          <h1 class="mb-4">Support our Friends!</h1>
+          <form class="needs-validation" novalidate="">
+            <div class="row">
+              <div class="col-12">
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group" onchange="updateDonation()">
+                  <input type="radio" class="btn-check" name="btnradiodonate" id="btnradio1" autocomplete="off" checked>
+                  <label class="btn btn-primary btn-radio align-items-center d-flex" for="btnradio1"><p class="m-auto">Monetary</p></label>
+                
+                  <input type="radio" class="btn-check" name="btnradiodonate" id="btnradio2" autocomplete="off">
+                  <label class="btn btn-primary btn-radio align-items-center d-flex" for="btnradio2"><p class="m-auto">Fashion</p</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div id="changingDonation" class="col-10 bg-primary text-white rounded-4 my-3 p-3 justify-content-center">
+                <h4 class="my-3">Enter your donation amount:</h4>
+                <input type="text" class="form-control w-50 m-auto mb-3" id="donationInput" placeholder="eg. 100" value="" required="">
+              </div>
+            </div>
+
+            <div class="row g-3 justify-content-center w-90 m-auto">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstNameInput" placeholder="First Name" value="" required="">
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastNameInput" placeholder="Last Name" value="" required="">
+              </div>
+  
+              <div class="col-12">
+                <label for="username" class="form-label">Email</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="emalInput" placeholder="Email" required="">
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="email" class="form-label">Phone Number</label>
+                <input type="email" class="form-control" id="phoneInput" placeholder="Phone Number">
+              </div>
+  
+              <button id="checkoutButton" class="w-50 btn btn-primary mt-4half" onclick="checkoutClicked()" type="button">Checkout</button>
+
+              <p id="checkWarning" class="text-center text-danger mt-3 invisible">Please enter valid information!</p>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </main>
 
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <img class="slogo mx-3" src="brightpawslogo.png">
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2023 BrightPaws, Inc</span>
+      </div>
+    </footer>
+  </div>
+
  
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <script>
+    var monetaryHTML = 
+      '<h4 class="my-3">Enter your donation amount:</h4>' +
+      '<input type="text" class="form-control w-50 m-auto mb-3" id="donationInput" placeholder="eg. 100" value="" required="">';
+
+    var fashionHTML = 
+      '<h4 class="my-3">Contact Us!</h4>' +
+      '<p>Email: email@domain.com</p>' +
+      '<p>Phone Number: xxx-xxx-xxxx</p>';
+
+    function updateDonation(){
+      if(document.getElementById("btnradio1").checked){
+        $('#changingDonation').html(monetaryHTML);
+      } else {
+        $('#changingDonation').html(fashionHTML);
+      }
+    }
+
+    function checkoutClicked(){
+      document.getElementById("checkWarning").classList.remove("invisible")
+
+      setTimeout(function addInvisible(){
+        document.getElementById("checkWarning").classList.add("invisible");
+      }, 1500);
+
+      if(document.getElementById("firstNameInput").value === ""){
+        document.getElementById("firstNameInput").classList.add("bg-danger");
+      } else{
+        document.getElementById("firstNameInput").classList.remove("bg-danger");
+      }
+
+      if(document.getElementById("lastNameInput").value === ""){
+        document.getElementById("lastNameInput").classList.add("bg-danger");
+      } else{
+        document.getElementById("lastNameInput").classList.remove("bg-danger");
+      }
+
+      if(document.getElementById("emalInput").value === ""){
+        document.getElementById("emalInput").classList.add("bg-danger");
+      } else{
+        document.getElementById("emalInput").classList.remove("bg-danger");
+      }
+
+      if(document.getElementById("phoneInput").value === ""){
+        document.getElementById("phoneInput").classList.add("bg-danger");
+      } else{
+        document.getElementById("phoneInput").classList.remove("bg-danger");
+      }
+
+
+    }
+  </script>
+  
 </body>
 
 </html>

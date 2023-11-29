@@ -11,6 +11,12 @@ hr {
     margin-top: 2em;
     margin-bottom: 2em;
 }
+.mt-4half {
+    margin-top: 2rem;
+}
+.w-90 {
+    width: 90%;
+}
 .text-primary {
     color: #4c707c !important;
 }
@@ -23,11 +29,17 @@ hr {
 .bg-tertiary {
     background-color: #ddded7 !important;
 }
+.bg-danger {
+    background-color: #ffcacd !important;
+}
 .btgrad {
     background-image: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0));
   }
 .mt-header {
     margin-top: 150px;
+}
+.form-control{
+    border: 2px black solid;
 }
 .logo {
     height: 6em;
@@ -37,10 +49,35 @@ hr {
 }
 .btn-primary {
     background-color: #4c707c;
-    border: 5px solid white;
+    border: 3px solid black;
     border-radius: 0.75em;
-    --bs-btn-hover-bg: black;
-    --bs-btn-active-bg: black;
-    --bs-btn-hover-border-color: white;
-    --bs-btn-active-border-color: white;
+    --bs-btn-hover-bg: #43636d;
+    --bs-btn-active-bg: #293d43;
+    --bs-btn-hover-border-color: black;
+    --bs-btn-active-border-color: black;
+}
+.btn-radio {
+    height: 3em;
+    width: 10em;
+    margin: auto;
+}
+.scrolledNav {
+    padding: 0 !important;
+    background-color: #a2bec4 !important;
+    background-image: none !important;
+}
+.scrolledNavLink {
+    color: #4c707c !important;
+}
+.scrolledNavLogo {
+    height: 3em;
+}
+#indexNav {
+    transition: none;
+}
+.nav-link {
+    transition: none;
+}
+#navLogo {
+    transition: none;
 }
