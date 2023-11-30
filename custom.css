@@ -38,7 +38,10 @@ hr {
 .mt-header {
     margin-top: 150px;
 }
-.form-control{
+.form-control {
+    border: 2px black solid;
+}
+.border-2-black-solid {
     border: 2px black solid;
 }
 .logo {
