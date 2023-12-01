@@ -61,13 +61,18 @@ hr {
     height: 3em;
 }
 .btn-primary {
-    background-color: #4c707c;
-    border: 3px solid black;
+    border: 3px black solid;
     border-radius: 0.75em;
+    background-color: #4c707c;
+    --bs-btn-color: #fff;
+    --bs-btn-border-color: black; 
     --bs-btn-hover-bg: #43636d;
     --bs-btn-active-bg: #293d43;
     --bs-btn-hover-border-color: black;
     --bs-btn-active-border-color: black;
+}
+.btndonate {
+    --bs-btn-bg: #43636d;
 }
 .btn-radio {
     height: 3em;
