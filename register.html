@@ -13,35 +13,26 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg position-fixed w-100 p-0 bg-secondary top-0 z-3">
+  <nav class="navbar position-fixed w-100 p-0 bg-secondary-transparent top-0 z-3">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body align-items-center">
-          <a class="nav-link active fs-3 fw-bold ms-5 position-absolute text-primary" aria-current="page" href="index.html">BACK</a>
-          <ul class="navbar-nav justify-content-around flex-grow-1 align-items-center">
-            <li class="nav-item">
-                <a class="nav-link active fs-3" aria-current="page" href="index.html"><img class="slogo" src="brightpawslogo.png" alt="logo"></img></a>
-            </li>
-          </ul>
-        </div>
+      <div class="offcanvas-body align-items-center d-flex">
+        <a class="nav-link active fs-3 fw-bold ms-5 position-absolute text-primary" aria-current="page" href="index.html">BACK</a>
+        <ul class="navbar-nav justify-content-around flex-grow-1 align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active fs-3" aria-current="page" href="index.html"><img class="slogo" src="brightpawslogo.png" alt="logo"></img></a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
 
   <main>
     <div class="container mt-header">
-      <div class="row justify-content-around">
-        <div class="col-5">
-          <img src="petcutout4cat.png" alt="cat cooking">
+      <div class="row justify-content-around mx-3 align-items-center">
+        <div class="col-5 mb-3">
+          <img class="w-100" src="petcutout4cat.png" alt="cat cooking">
         </div>
-        <div class="col-5 text-center bg-secondary px-5 pt-5 rounded-5">
+        <div class="col-lg-5 text-center bg-secondary px-5 pt-5 rounded-5">
           <h1 class="mb-4">Join Us!</h1>
           <form class="needs-validation" novalidate="">
             <div class="row g-3 justify-content-center w-90 m-auto">
@@ -67,7 +58,7 @@
                 <input type="email" class="form-control" id="phoneInput" placeholder="Phone Number">
               </div>
   
-              <button id="checkoutButton" class="w-50 btn btn-primary mt-4half" onclick="checkoutClicked()" type="button">Checkout</button>
+              <button id="checkoutButton" class="w-50 btn btn-primary mt-4plus" onclick="checkoutClicked()" type="button">Checkout</button>
 
               <p id="checkWarning" class="text-center text-danger mt-3 invisible">Please enter valid information!</p>
             </div>
@@ -77,11 +68,30 @@
     </div>
   </main>
 
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <img class="slogo mx-3" src="brightpawslogo.png">
-        <span class="mb-3 mb-md-0 text-body-secondary">© 2023 BrightPaws, Inc</span>
+  <div class="container-fluid bg-secondary">
+    <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 mt-5 border-top">
+      <div class="col-auto justify-content-center me-3"><img class="mlogo" src="brightpawslogo.png"></div>
+      <div class="col-8">
+        <div class="row">
+          <div class="col-12 text-break">
+            © 2023 BrightPaws, Inc
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-break">
+            123-456-7890
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-break">
+            brightpawsfbla@gmail.com
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-break">
+            Images by Unsplash
+          </div>
+        </div>
       </div>
     </footer>
   </div>
