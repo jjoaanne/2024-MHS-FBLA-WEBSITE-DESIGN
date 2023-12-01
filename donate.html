@@ -28,12 +28,19 @@
 
   <main>
     <div class="container mt-header">
+      <hr>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <h1 class="fs-6 fw-bold m-auto w-75">Help our animals to transition from streets to warm, loving homes. Your generous donations can extend beyond monetary support—donate your old clothes and fabrics, and we'll transform them into stylish attire for our upcoming pet fashion show.</h1>
+        </div>
+      </div>
+      <hr>
       <div class="row justify-content-around mx-3 align-items-center">
         <div class="col-5 mb-3">
           <img class="w-100" src="petcutout5dog.png" alt="cat cooking">
         </div>
         <div class="col-lg-5 text-center bg-secondary px-5 pt-5 rounded-5">
-          <h1 class="mb-4">Support our Friends!</h1>
+          <h1 class="mb-4">Donate</h1>
           <form class="needs-validation" novalidate="">
             <div class="row">
               <div class="col-12">
@@ -42,14 +49,14 @@
                   <label class="btn btn-primary btn-radio align-items-center d-flex" for="btnradio1"><p class="m-auto">Monetary</p></label>
                 
                   <input type="radio" class="btn-check" name="btnradiodonate" id="btnradio2" autocomplete="off">
-                  <label class="btn btn-primary btn-radio align-items-center d-flex" for="btnradio2"><p class="m-auto">Fashion</p</label>
+                  <label class="btn btn-primary btn-radio align-items-center d-flex" for="btnradio2"><p class="m-auto">Clothes</p</label>
                 </div>
               </div>
             </div>
 
             <div class="row justify-content-center">
               <div id="changingDonation" class="col-10 bg-primary text-white rounded-4 my-3 p-3 justify-content-center">
-                <h4 class="my-3">Enter your donation amount:</h4>
+                <h5 class="my-3">Enter your donation amount:</h5>
                 <input type="text" class="form-control w-50 m-auto mb-3" id="donationInput" placeholder="eg. 100" value="" required="">
               </div>
             </div>
@@ -122,13 +129,13 @@
 
   <script>
     var monetaryHTML = 
-      '<h4 class="my-3">Enter your donation amount:</h4>' +
+      '<h5 class="my-3">Enter your donation amount:</h5>' +
       '<input type="text" class="form-control w-50 m-auto mb-3" id="donationInput" placeholder="eg. 100" value="" required="">';
 
     var fashionHTML = 
       '<h4 class="my-3">Contact Us!</h4>' +
-      '<p>Email: email@domain.com</p>' +
-      '<p>Phone Number: xxx-xxx-xxxx</p>';
+      '<p>Email: brightpawsfbla@domain.com</p>' +
+      '<p>Phone Number: 123-456-7890</p>';
 
     function updateDonation(){
       if(document.getElementById("btnradio1").checked){
@@ -169,7 +176,14 @@
         document.getElementById("phoneInput").classList.remove("bg-danger");
       }
 
-
+      if(
+        (document.getElementById("firstNameInput").value !== "") && 
+        (document.getElementById("lastNameInput").value !== "") &&
+        (document.getElementById("emalInput").value !== "") &&
+        (document.getElementById("phoneInput").value !== "")
+        ) {
+          document.getElementById("checkWarning").classList.add("invisible");
+      }
     }
   </script>
   

@@ -28,12 +28,20 @@
 
   <main>
     <div class="container mt-header">
+      <hr>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <h1 class="fs-6 fw-bold m-auto w-75">Secure your spot at The Pet Gala—an experience where delectable cuisine meets captivating fashion, all in celebration of our furry friends. Your registration ensures complimentary access to a delightful evening of gourmet delights and an enchanting pet fashion show!
+          </h1>
+        </div>
+      </div>
+      <hr>
       <div class="row justify-content-around mx-3 align-items-center">
         <div class="col-5 mb-3">
           <img class="w-100" src="petcutout4cat.png" alt="cat cooking">
         </div>
         <div class="col-lg-5 text-center bg-secondary px-5 pt-5 rounded-5">
-          <h1 class="mb-4">Join Us!</h1>
+          <h1 class="mb-4">Register</h1>
           <form class="needs-validation" novalidate="">
             <div class="row g-3 justify-content-center w-90 m-auto">
               <div class="col-sm-6">
@@ -58,7 +66,7 @@
                 <input type="email" class="form-control" id="phoneInput" placeholder="Phone Number">
               </div>
   
-              <button id="checkoutButton" class="w-50 btn btn-primary mt-4plus" onclick="checkoutClicked()" type="button">Checkout</button>
+              <button id="checkoutButton" class="w-50 btn btn-primary mt-4plus" onclick="checkoutClicked()" type="button">Confirm</button>
 
               <p id="checkWarning" class="text-center text-danger mt-3 invisible">Please enter valid information!</p>
             </div>
@@ -132,7 +140,14 @@
         document.getElementById("phoneInput").classList.remove("bg-danger");
       }
 
-
+      if(
+        (document.getElementById("firstNameInput").value !== "") && 
+        (document.getElementById("lastNameInput").value !== "") &&
+        (document.getElementById("emalInput").value !== "") &&
+        (document.getElementById("phoneInput").value !== "")
+        ) {
+          document.getElementById("checkWarning").classList.add("invisible");
+      }
     }
   </script>
   
