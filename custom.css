@@ -90,3 +90,7 @@ hr {
 .scrolledNavLogo {
     height: 3em !important;
 }
+#aboutushr {
+    position: relative;
+    bottom: 100px;
+}
